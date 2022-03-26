@@ -3,10 +3,16 @@
   --bg-color: #f1f1f1;
   --border-color: #ccc;
   --text-color: black;
+  --btn-color: #4CAF50;
+  --btn-hover-color: #45a048;
 }
 
 body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
+* {
+  margin: 1px;;
+  padding: 1px;;
+  box-sizing: border-box;
+}
 
 header {
   background-color: var(--bg-color);
@@ -52,13 +58,11 @@ p {
 
 footer p{
   text-align: center;
-  background-color: var(--main-bg-color);
-  padding: 16px 16px;
-  border-radius: 4px;
+  background-color: var(--bg-color);
 }
 
 .simple-button {
-  background-color: #4CAF50;
+  background-color: var(--btn-color);
   border: none;
   color: white;
   padding: 12px 30px;
@@ -71,5 +75,5 @@ footer p{
 }
 
 .simple-button:hover {
-  background-color: #45a049;
+  background-color: var(--btn-hover-color);
 }
