@@ -14,29 +14,28 @@
     </header>
 
     <main class="container">
-        <form method="dialog">
+        <form method="post">
             <div>
-              <label for='firstName' >First Name</label>
-              <input type='text' id='firstName' autocomplete="off" placeholder='First Name'/>
+              <label for="firstName" >First Name</label>
+              <input type="text" id="firstName" autocomplete="off" placeholder="First Name"/>
             </div>
             <div>
-                <label for='lastName' >Last Name</label>
-                <input type='text' id='lastName' autocomplete="off" placeholder='Last Name'/>
+                <label for="lastName" >Last Name</label>
+                <input type="text" id="lastName" autocomplete="off" placeholder="Last Name"/>
             </div>
             <div>
-                <label for='password'>Password</label>
-                <input type='password' id='password' autocomplete="off" placeholder='Password'/>
+                <label for="password">Password</label>
+                <input type="password" id="password" autocomplete="off" placeholder="Password"/>
             </div>
             <div>
                 <label for="date">Date</label>
-                <input type="date" id="date" name="date" value="mm/dd/yyyy">
+                <input type="date" id="date" value="">
             </div>
             <div>
-                <label for='messageText' autocomplete="off">Message Text</label>
-                <input type='text' id='messageText' placeholder='Your message'/>
-            </div>
-            <div>
-                <button type='submit' id='showMessage'>Show Message</button>
+                <label for="messageText">Message Text</label>
+                <input type="text" id="messageText" autocomplete="off" placeholder="Your message"/>
+
+                <button type="submit" id="showMessage">Show Message</button>
             </div>
         </form>
     </main>

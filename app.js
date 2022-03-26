@@ -4,28 +4,34 @@ const firstNameField = document.getElementById('firstName');
 const lastNameField = document.getElementById('lastName');
 const passwordField = document.getElementById('password');
 const dateField = document.getElementById('date');
+const inputs = [...document.querySelectorAll('input')];
 
-function onSaveButtonClick(){
+
+const showMessage = () => {
+    const message = messageTextField.value;
     const firstName = firstNameField.value;
     const lastName = lastNameField.value;
-    const messageText = messageTextField.value;
-    let password = passwordField.value;
-    let date = dateField.value;
+    const password = passwordField.value;
+    const date = dateField.value;
+    alert(`Message: ${message}\nName: ${firstName} ${lastName}\nPassword: ${password}\nDate: ${date}`);
+};
 
-    const fullName = firstName.toUpperCase() + ' ' + lastName.toUpperCase();
-    showMessage(fullName, password, messageText, date);
+const formIsFilled = () => {
+    return inputs.every(input => input.value !== '')
+};
 
-    const inputs = document
-        .querySelectorAll('messageTextField, firstNameField, lastNameField, passwordField, dateField');
+const clean = () => {
+    return inputs.map(x => x.value = '');
+};
 
-    inputs.forEach(input => input.value = '');
-}
+const onShowMessageButtonClick = () => {
+    if (formIsFilled()) {
+        showMessage();
+        clean();
+        return;
+    }
 
-function showMessage(fullName, password, messageText, date){
-    alert('The person with the name ' + fullName + ' ' 
-    + 'and the password ' + password 
-    + ' said:' + '\n' + messageText + '\n'
-    + 'on the date ' + date);
-}
+    alert('Fill all the fields!');
+};
 
-showMessageButton.addEventListener('click', onSaveButtonClick);
+showMessageButton.addEventListener('click', onShowMessageButtonClick);
