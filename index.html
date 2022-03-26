@@ -7,26 +7,44 @@
     <title>Static page demo</title>
 </head>
 <body>
-    <h1>
-        Static page demo
-    </h1>
-    <form class="container">
-        <div>
-          <label for='firstName'>First Name</label>
-          <input type='text' id='firstName' placeholder='First Name'/>
-        </div>
-        <div>
-            <label for='lastName'>Last Name</label>
-            <input type='text' id='lastName' placeholder='Last Name'/>
-        </div>
-        <div>
-            <label for='messageText'>Message Text</label>
-            <input type='text' id='messageText' placeholder='Last Name'/>
-        </div>
-        <div>
-            <button type='submit' id='showMessage'>Show Message</button>
-        </div>
-    </form>
+    <header>
+        <h1>
+            Static page demo
+        </h1>
+    </header>
+
+    <main class="container">
+        <form method="dialog">
+            <div>
+              <label for='firstName' >First Name</label>
+              <input type='text' id='firstName' autocomplete="off" placeholder='First Name'/>
+            </div>
+            <div>
+                <label for='lastName' >Last Name</label>
+                <input type='text' id='lastName' autocomplete="off" placeholder='Last Name'/>
+            </div>
+            <div>
+                <label for='password'>Password</label>
+                <input type='password' id='password' autocomplete="off" placeholder='Password'/>
+            </div>
+            <div>
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" value="mm/dd/yyyy">
+            </div>
+            <div>
+                <label for='messageText' autocomplete="off">Message Text</label>
+                <input type='text' id='messageText' placeholder='Your message'/>
+            </div>
+            <div>
+                <button type='submit' id='showMessage'>Show Message</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>
+            &copy; UTM.Info.ID 2022
+        </p>
+    </footer>
     <script src="app.js"></script>
 </body>
 </html>
