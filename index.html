@@ -29,7 +29,7 @@
             </div>
             <div>
                 <label for="date">Date</label>
-                <input type="date" id="date" value="">
+                <input type="date" id="date">
             </div>
             <div>
                 <label for="messageText">Message Text</label>
@@ -37,12 +37,16 @@
             </div>
             <div>
                 <label for="result">Result</label>
-                <input type="text" id="result" readonly placeholder="Result"/>
+                <textarea id="result" rows="5" readonly autocomplete="off" placeholder="Result..."></textarea>
             </div>
-
         </form>
         <div>
+            <label for="details">Details</label>
+            <textarea id="details" rows="1" readonly autocomplete="off" placeholder="Details"></textarea>
+        </div>
+        <div class="button-container">
             <button class="simple-button" id="showMessage">Show Message</button>
+            <button class="simple-button red-button" id="clearForm">Clear Form</button>
         </div>
     </main>
     <footer>
