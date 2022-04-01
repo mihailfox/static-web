@@ -4,16 +4,12 @@ const firstNameField = document.getElementById('firstName');
 const lastNameField = document.getElementById('lastName');
 const passwordField = document.getElementById('password');
 const dateField = document.getElementById('date');
+const result = document.getElementById('result');
 const inputs = [...document.querySelectorAll('input')];
 
 
-const showMessage = () => {
-    const message = messageTextField.value;
-    const firstName = firstNameField.value;
-    const lastName = lastNameField.value;
-    const password = passwordField.value;
-    const date = dateField.value;
-    alert(`Message: ${message}\nName: ${firstName} ${lastName}\nPassword: ${password}\nDate: ${date}`);
+const showMessage = (input) => {
+    result.value = input;
 };
 
 const formIsFilled = () => {
@@ -26,12 +22,10 @@ const clean = () => {
 
 const onShowMessageButtonClick = () => {
     if (formIsFilled()) {
-        showMessage();
-        clean();
-        return;
+        showMessage(`${firstNameField.value} ${lastNameField.value} ${passwordField.value} ${dateField.value} ${messageTextField.value}`);
+    } else {
+        alert('Fill all fields!');
     }
-
-    alert('Fill all the fields!');
 };
 
 showMessageButton.addEventListener('click', onShowMessageButtonClick);

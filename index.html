@@ -15,7 +15,6 @@
 
     <main class="container">
         <form>
-            <!-- github pages does not allow post -->
             <div>
               <label for="firstName" >First Name</label>
               <input type="text" id="firstName" autocomplete="off" placeholder="First Name"/>
@@ -37,9 +36,14 @@
                 <input type="text" id="messageText" autocomplete="off" placeholder="Your message"/>
             </div>
             <div>
-                <button type="submit" class="simple-button" id="showMessage">Show Message</button>
+                <label for="result">Result</label>
+                <input type="text" id="result" readonly placeholder="Result"/>
             </div>
+
         </form>
+        <div>
+            <button class="simple-button" id="showMessage">Show Message</button>
+        </div>
     </main>
     <footer>
         <p>
