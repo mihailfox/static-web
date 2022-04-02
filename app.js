@@ -25,7 +25,7 @@ const onClearFormButtonClick = () => {
 
 const onShowMessageButtonClick = () => {
     if (formIsFilled()) {
-        showMessage(`${firstNameField.value} ${lastNameField.value}\n${passwordField.value}\n${dateField.value}\n${messageTextField.value}`);
+        showMessage(`${firstNameField.value} ${lastNameField.value}\n${passwordField.value}\n${messageTextField.value}`);
     } else {
         alert('Fill all fields!');
     }
